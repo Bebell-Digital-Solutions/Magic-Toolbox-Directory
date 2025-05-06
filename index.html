@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Toolbox - Herramientas Digitales</title>
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    
+    
         @property --rotate {
           syntax: '<number>';
           inherits: true;
@@ -27,21 +30,65 @@
         :root {
           --circle-size: 35vmin;
           --spacing: 3vmin;
-          --font-size: 4.5vmin;
+          --font-size: 4.05vmin;
           --ease-speed: 50ms;
+          --logo-size: 18vmin;
         }
 
         body {
-            height: 500vh;
+            height: 900vh;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Lato', sans-serif;
             font-size: var(--font-size);
+            font-weight: 500;
             background-color: #f2f1fb;
             color: #4b4998;
             animation: scrollAnim linear;
             animation-timeline: scroll(nearest block);
         }
+        
+        
+        
+        .logo-container {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: var(--logo-size);
+            height: var(--logo-size);
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: 0 0 20px rgba(75, 73, 152, 0.2);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 0 25px rgba(75, 73, 152, 0.3);
+        }
+
+        .logo-container a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 140%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        
+        
 
         ul {
           position: fixed;
@@ -93,6 +140,7 @@
 
         li a {
             text-decoration: none;
+            font-family: 'Lato', sans-serif;
             color: inherit;
             transition: color 0.3s ease;
         }
@@ -180,8 +228,15 @@
     </style>
 </head>
 <body>
+    
+      <div class="logo-container">
+        <a href="https://magictoolbox.net" aria-label="Magic Toolbox Home">
+            <img src="https://bucket.mlcdn.com/a/3336/3336910/images/2295a45e3e48af1e3ac4370f511271b5d510d825.png" alt="Magic Toolbox Logo">
+        </a>
+    </div>
+    
     <ul>
-        <li><a href="https://magictoolbox.net/todos"><span>T</span><span>o</span><span>d</span><span>o</span><span>s</span> <span>✅</span></a></li>
+        <li><a href="https://magictoolbox.net/todos"><span>T</span><span>o</span><span>d</span><span>o</span><span>s</span> </a></li>
         <li><a href="https://magictoolbox.net/organizacion"><span>O</span><span>r</span><span>g</span><span>a</span><span>n</span><span>i</span><span>z</span><span>a</span><span>c</span><span>i</span><span>ó</span><span>n</span></a></li>
         <li><a href="https://magictoolbox.net/productividad"><span>P</span><span>r</span><span>o</span><span>d</span><span>u</span><span>c</span><span>t</span><span>i</span><span>v</span><span>i</span><span>d</span><span>a</span><span>d</span></a></li>
         <li><a href="https://magictoolbox.net/automatizacion"><span>A</span><span>u</span><span>t</span><span>o</span><span>m</span><span>a</span><span>t</span><span>i</span><span>z</span><span>a</span><span>c</span><span>i</span><span>ó</span><span>n</span></a></li>
